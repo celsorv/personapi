@@ -1,6 +1,9 @@
 package com.softhouse.personapi.dto.request;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.Valid;
@@ -9,7 +12,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Builder
-@Getter @Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class PersonDTO {
