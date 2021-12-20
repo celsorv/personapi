@@ -6,12 +6,14 @@ import com.softhouse.personapi.entity.Person;
 import com.softhouse.personapi.exception.PersonNotFoundException;
 import com.softhouse.personapi.mapper.PersonMapper;
 import com.softhouse.personapi.repository.PersonRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
 
     private final PersonRepository personRepository;
@@ -20,10 +22,12 @@ public class PersonService {
     //private PersonMapper personMapper;
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
 
-    @Autowired
-    public PersonService(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
+    // @AllArgsConstructor fazendo isso
+    //---
+    //@Autowired
+    //public PersonService(PersonRepository personRepository) {
+    //    this.personRepository = personRepository;
+    //}
 
     public MessageResponseDTO createPerson(PersonDTO personDTO) {
         return saveAndCreateMessageResponse(personDTO, "Created person with ID");
