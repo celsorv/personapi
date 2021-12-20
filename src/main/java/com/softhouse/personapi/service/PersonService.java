@@ -57,8 +57,6 @@ public class PersonService {
         Person personToSave = personMapper.toModel(personDTO);
         Person savedPerson = personRepository.save(personToSave);
 
-        System.out.println(personToSave.getId());
-
         return MessageResponseDTO
                 .builder()
                 .message(message + " " + savedPerson.getId())
