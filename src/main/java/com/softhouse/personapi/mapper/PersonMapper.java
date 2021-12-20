@@ -3,7 +3,6 @@ package com.softhouse.personapi.mapper;
 import com.softhouse.personapi.dto.request.PersonDTO;
 import com.softhouse.personapi.entity.Person;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
