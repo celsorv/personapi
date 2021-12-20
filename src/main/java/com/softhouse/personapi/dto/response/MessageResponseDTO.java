@@ -1,4 +1,4 @@
-package com.softhouse.personapi.dto;
+package com.softhouse.personapi.dto.response;
 
 import lombok.Builder;
 import lombok.Getter;
