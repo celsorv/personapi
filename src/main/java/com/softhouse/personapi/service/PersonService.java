@@ -14,11 +14,11 @@ import java.util.List;
 @Service
 public class PersonService {
 
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
 
     //@Autowired
     //private PersonMapper personMapper;
-    private PersonMapper personMapper = PersonMapper.INSTANCE;
+    private final PersonMapper personMapper = PersonMapper.INSTANCE;
 
     @Autowired
     public PersonService(PersonRepository personRepository) {
