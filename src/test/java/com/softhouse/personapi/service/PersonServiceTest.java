@@ -46,6 +46,7 @@ public class PersonServiceTest {
                 .builder()
                 .message("Created person with ID " + id)
                 .build();
+        // ok
     }
 
 }
